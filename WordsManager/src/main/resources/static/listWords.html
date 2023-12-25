@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <title>List Words</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="requestingListWords.js"></script>
-    <script src="fillTable.js"></script>
+    <link rel="stylesheet" href="pop_up.css">
 </head>
 <body>
-<h1>List Words!!!</h1>
-<a href="editWord.html?idWord=value1">Открыть страницу</a>
 
-<script>
-    requestingListWords();
-</script>
+<div class="pop_up" id="pop_up">
+    <div class="pop_up_container">
+        <div class="pop_up_body" id="pop_up_body">
+            <p>Оставить заказ</p>
+            <form action="">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Телефон">
+                <button>Оставить заказ</button>
+                <div class="pop_up_close" id="pop_up_close">&#10006</div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<script src="fillTable.js"></script>
+
+
+
+<h1>List Words!!!</h1>
+
 <table id="tableListWords">
-    <tr onclick="window.location.href = 'editWord.html?idWord=value1';">
-        <td>Ячейка 1, строка 1</td>
-        <td>Ячейка 2, строка 1</td>
-    </tr>
-    <tr onclick="window.location.href = 'editWord.html?idWord=value1';">
-        <td>Ячейка 1, строка 2</td>
-        <td>Ячейка 2, строка 2</td>
-    </tr>
 </table>
+
 </body>
 </html>
