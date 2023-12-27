@@ -1,10 +1,5 @@
-const closePopUp = document.getElementById('pop_up_close');
-const popUp = document.getElementById('pop_up');
-const pop_up_body = document.getElementById('pop_up_body');
+let keys = null;
 
-closePopUp.addEventListener('click',()=>{
-    popUp.classList.remove('active');
-})
 
 requestingListWords();
 
@@ -16,27 +11,27 @@ function requestingListWords(){
     fetch('/words')
         .then(response => response.json())
         .then(listWords => {
+            getKeys(listWords);
             fillTable(listWords);
         })
         .catch(error => {
             console.error('Произошла ошибка:', error);
         });
 }
+function getKeys(listWords){
+    keys = Object.keys(listWords[0]);
+}
 function fillTable(listWords){
-
-    const keys = Object.keys(listWords[0]);
-    console.log(keys);
-
     const tableListWords = document.getElementById("tableListWords");
     tableListWords.innerHTML = "";
 
     for (let i = 0; i < listWords.length; i++) {
         const newRow = tableListWords.insertRow(i);
 
-        //добавляем слушатель на строку
-        addLisenerOnRow(newRow,listWords[i].id);
         //заполняем строку
         fillRow(newRow,keys,listWords[i])
+        //добавляем слушатель на строку
+        addLisenerOnRow(newRow,listWords[i].id);
     }
 
 }
@@ -45,35 +40,9 @@ function fillRow(row,keys,word){
         var newCell = row.insertCell(i);
         newCell.innerHTML = word[keys[i]];
     }
-
 }
 function addLisenerOnRow(newRow,idValue){
-    const idValueConst = idValue;
     newRow.onclick = function() {
-        // window.location.href = 'editWord.html?idWord=' + idValueConst; //наверное больше не нужна
-
-        fillPopUp(idValueConst);
-        popUp.classList.add('active');
-
+        openUpdatingModal(idValue);
     };
-
 }
-function fillPopUp(idValueConst){
-    fetchWordById(idValueConst);
-}
-function fetchWordById(id){
-    fetch('/words/'+id)
-        .then(response => response.json())
-        .then(word => {
-
-            const paragraph = document.createElement('p');
-            paragraph.textContent = word.id+word.foreignWord;
-            pop_up_body.appendChild(paragraph);
-
-        })
-        .catch(error => {
-            console.error('Произошла ошибка:', error);
-        });
-}
-
-
