@@ -1,10 +1,8 @@
 const modalWindow = document.getElementById('modal');
-const apply_button = document.getElementById('apply_button');
-const close_button = document.getElementById('close_button');
 const title_modal = document.getElementById('title_modal');
 const form_modal = document.getElementById('form_modal');
 const idWord = document.createElement('h3');
-let idWord_This = null;
+const buttons_modal = document.getElementById('buttons_modal');
 
 function openUpdatingModal(idValue){
     modalWindow.classList.add('open');
@@ -55,16 +53,22 @@ function fillModalBox(word){
         });
         form_modal.appendChild(input);
     }
+
+    buttons_modal.innerHTML = "";
+    const update_button = document.createElement('button');
+    update_button.innerText = 'Send';
+    const close_button = document.createElement('button');
+    close_button.innerText = 'Close';
+    buttons_modal.appendChild(update_button);
+    buttons_modal.appendChild(close_button);
+    update_button.addEventListener('click',function (){
+        updateWord(word.id);
+        closeModal();
+    })
+    close_button.addEventListener('click',function (){
+        closeModal();
+    });
 }
-
-apply_button.addEventListener('click',function (){
-    applyChanges();
-    closeModal();
-})
-close_button.addEventListener('click',function (){
-    closeModal();
-});
-
 /**
  * эти два метода скрывают модальное окно если клик был на серой области
  */
@@ -78,26 +82,33 @@ document.getElementById('modal').addEventListener('click',event=>{
 
 function closeModal(){
     form_modal.innerHTML = "";
-    idWord_This = null;
     modalWindow.classList.remove('open');
+    buttons_modal.innerHTML = "";
 }
 
-function applyChanges(){
+function updateWord(wordId){
     const wordMap = new Map();
-    wordMap.set('id',idWord_This.toString());
-    let i = 0;
+    wordMap.set('id',wordId);
+    let i = 1;
     for (; i < keys.length; i++) {
-        var textarea = document.getElementById(keys[i]+'Word');
-        var value = textarea.value;
+        const textarea = document.getElementById(keys[i] + 'Word');
+        const value = textarea.value;
         wordMap.set(keys[i],value);
     }
 
 
-// Выводим все ключи Map
-    wordMap.forEach((value, key) => {
-        console.log(key+': '+value);
+    const wordObject = Object.fromEntries(wordMap);
+
+// Отправляем объект в виде JSON-строки
+    fetch('/words/update', {
+        method: 'POST',
+        body: JSON.stringify(wordObject),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(response => {
+        console.log('Статус запроса: ' + response.status);
+    }).catch(error => {
+        console.error('Произошла ошибка: ', error);
     });
-
-
-    closeModal();
 }
