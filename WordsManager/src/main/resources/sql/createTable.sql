@@ -16,7 +16,8 @@ CREATE TABLE Word(
                      groupWrd varchar(50),
                      has_voise varchar(50),
                      has_image varchar(50),
-                     sorting_value integer default 0
+                     sorting_value integer default 0,
+                     version_update integer DEFAULT 0
 );
 DROP TABLE Word;
 -- ALTER TABLE Word ADD COLUMN sorting_value integer default 0;
@@ -26,5 +27,5 @@ CREATE TABLE properties(
                            key varchar(100)UNIQUE NOT NULL,
                            value varchar(200)
 );
-INSERT INTO properties(key) VALUES ('update_at');
+INSERT INTO properties(key,value) VALUES ('latest_words_version_update',0);
 -- ////////////////////////////////////////////////////////
