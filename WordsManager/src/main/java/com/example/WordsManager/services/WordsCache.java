@@ -10,6 +10,20 @@ import java.util.List;
 @Component
 @Data
 public class WordsCache {
-    private final List<Word> listAllWords = new ArrayList<>();
+    private List<Word> listAllWords = new ArrayList<>();
     private Integer latest_words_version_update = 0;
+
+    public WordsCache() {
+        listAllWords.add(
+                new Word(
+                        0,
+                        "testWord",
+                        "[testWord]",
+                        "тестовое Слово",
+                        "тестовое Слово",
+                        null,
+                        null,
+                        "тестовая группа",
+                        0)); //TODO надо будет убрать это слово из кэша
+    }
 }
