@@ -18,17 +18,17 @@ public class PropService {
 
 
     /**
-     * метод установит новое значение update_at в таблице properties
+     * метод установит новое значение dictionary_version в таблице properties
      */
     @Transactional
-    public void setUpdateAt() {
-//        propRepository.setNewValue("latest_words_version_update", ZonedDateTime.now().toString());
+    public void setDictionaryVersion() {
+//        propRepository.setNewValue("dictionary_version", ZonedDateTime.now().toString()); //TODO теперь используем int вместо формата времени
     }
 
     /**
-     * метод выдаст версию последнего обновления списка Word БД
+     * метод выдаст версию последнего обновления словаря Word БД
      */
-    public Mono<PropModel> get_Latest_words_version_update() {
-        return propRepository.findByKey("latest_words_version_update");
+    public Mono<PropModel> getDictionaryVersion() {
+        return propRepository.findByKey("dictionary_version");
     }
 }
