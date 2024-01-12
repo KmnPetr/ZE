@@ -23,9 +23,10 @@ public class SecurityConfig{
                             "/listWords.html", //TODO вернуть потом запретить всем
                             "/fillTable.js", //TODO вернуть потом запретить всем
                             "/requestingListWords.js", //TODO вернуть потом запретить всем
-                            "openPage.html",
+                            "mainPage.html",//TODO вернуть потом запретить всем
                             "/styles.css",
-                            "/words/**" //TODO вернуть потом запретить всем
+                            "/words/**", //TODO вернуть потом запретить всем
+                            "/backup/**" //TODO вернуть потом запретить всем
                     ).permitAll();
 //                    auth.pathMatchers(
 //                    ).hasRole("ADMIN");
