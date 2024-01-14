@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="245cbc0c-3571-414c-b3aa-fd468588591e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/models/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/models/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/BackupWordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/BackupWordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/createTable.sql" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/createTable.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordsManager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2aw5o9P7rF7yR13sDlhET1Ugxmq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,6 +55,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "ssh.settings",
     "vue.rearranger.settings.migration": "true"
   },
@@ -86,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705216976678</updated>
       <workItem from="1705216989307" duration="745000" />
-      <workItem from="1705217892577" duration="7569000" />
+      <workItem from="1705217892577" duration="13028000" />
     </task>
     <servers />
   </component>
