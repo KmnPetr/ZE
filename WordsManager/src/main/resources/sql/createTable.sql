@@ -13,9 +13,9 @@ CREATE TABLE Word(
                      transcription varchar(100),
                      translation varchar(400)NOT NULL,
                      description varchar(400),
-                     groupWrd varchar(50),
-                     has_voise varchar(50),
-                     has_image varchar(50),
+                     topic varchar(50),
+                     link_voice varchar(50),
+                     link_image varchar(50),
                      sorting_value integer default 0,
                      version_update integer DEFAULT 0
 );

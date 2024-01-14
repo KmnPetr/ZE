@@ -5,46 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="245cbc0c-3571-414c-b3aa-fd468588591e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/WordsManager/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/WordsManagerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/controllers/BackupController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/controllers/WordsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/models/PropModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/models/Word.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/repositories/PersonRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/repositories/PropRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/repositories/WordsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/security/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/security/PersonService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/security/UserRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/BackupWordService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/PropService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/WordsCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/WordsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_0, pronouns and question words).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_1,verbs).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_2,nouns).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_3,adjectives).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_4,adverbs).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_5, prepositions and conjunctions).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_6, new words).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/anyQuery.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/createTable.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/static/fillTable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/static/listWords.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/static/mainPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/static/modalWindow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/static/openUpdatingModal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/static/runBackup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/src/test/java/com/example/WordsManager/WordsManagerApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/models/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/models/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/BackupWordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/BackupWordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/createTable.sql" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/src/main/resources/sql/createTable.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -66,22 +35,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Petr/git/ZE/WordsManager&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Petr/git/ZE/WordsManager/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ssh.settings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Petr\git\ZE\WordsManager\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="WordsManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="local" />
@@ -101,6 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705216976678</updated>
       <workItem from="1705216989307" duration="745000" />
+      <workItem from="1705217892577" duration="7569000" />
     </task>
     <servers />
   </component>
