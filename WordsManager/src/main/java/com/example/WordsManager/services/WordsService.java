@@ -44,8 +44,8 @@ public class WordsService {
     
     @Scheduled(fixedDelay = 2000)
     private void upgradeCache(){
-
         Integer DBdicVers = Integer.valueOf(Objects.requireNonNull(propService.getDictionaryVersion().block()).getValue());
+
         if (DBdicVers>wordsCache.getDictionaryVersion()){
             List<Word> newList = wordsRepository.findAll().toStream().toList();
             wordsCache.setListAllWords(newList);

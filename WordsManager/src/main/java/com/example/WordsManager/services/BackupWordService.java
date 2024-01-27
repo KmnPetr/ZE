@@ -1,6 +1,7 @@
 package com.example.WordsManager.services;
 
 import com.example.WordsManager.models.Word;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+@Slf4j
 @Service
 public class BackupWordService {
     private final WordsService wordsService;
