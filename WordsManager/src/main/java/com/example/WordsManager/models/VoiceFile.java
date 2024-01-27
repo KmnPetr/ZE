@@ -21,4 +21,5 @@ public class VoiceFile {
     private String fileName;
     @Column("file_data")
     private byte[] fileData;
+
 }
