@@ -26,7 +26,7 @@ public class VoiceFileService {
      * метод достанет из папки static/voice файлы и сохранит их в БД
      */
     @Async
-    public void printListFiles(){
+    public void printListFilesAndSaveDB(){
         List<String> listFiles = getListFiles(pathFolder);
         List<VoiceFile> voiceFiles = collectListEntity(listFiles);
         voiceFiles.stream().forEach(it->{System.out.println("Файл: "+it.getFileName()+ " \t\tРазмер: "+it.getFileData().length);});
@@ -76,7 +76,7 @@ public class VoiceFileService {
 
             File resourceFolder = null;
             try {
-                resourceFolder = new File(path/*getClass().getResource(path).toURI() хорошо работает относительно ресурсной папки*/);
+                resourceFolder = new File(path);
             }catch (Exception e){e.printStackTrace();}
 
             File[] files = null;
