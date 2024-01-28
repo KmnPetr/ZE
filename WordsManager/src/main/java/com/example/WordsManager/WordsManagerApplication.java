@@ -10,7 +10,5 @@ public class WordsManagerApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(WordsManagerApplication.class, args);
 
-		context.getBean(VoiceFileService.class).printListFiles();
-
 	}
 }

@@ -69,8 +69,8 @@ public class BackupWordService {
                             + "'" + sortedWords.get(i).getTranscription() + "',"
                             + "'" + sortedWords.get(i).getTranslation() + "',"
                             + "'" + sortedWords.get(i).getDescription() + "',"
-                            + "'" + sortedWords.get(i).getLink_voice() + "',"
-                            + "'" + sortedWords.get(i).getLink_image() + "',"
+                            + printField(sortedWords.get(i).getLink_voice()) + ","
+                            + printField(sortedWords.get(i).getLink_image()) + ","
                             + "'" + sortedWords.get(i).getTopic() + "',"
                             + "'" + sortedWords.get(i).getSorting_value() + "'"
                     + ")";
@@ -82,6 +82,16 @@ public class BackupWordService {
         }
 
         return rows;
+    }
+
+    /**
+     * в случае если поле будет нуллевым, то метод выдаст просто null строку без ковычек
+     * а если нет то с ковычками
+     */
+    private String printField(String field){
+        if (field!=null){
+            return "'" + field + "'";
+        }else return "null";
     }
 
     /**
