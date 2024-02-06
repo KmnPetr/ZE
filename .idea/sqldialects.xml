@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/WordsManager/src/main/resources/db/migration/V1__init.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/WordsManager/src/main/resources/backup/wordsSave__2024-01-15_(16-29-08).sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/WordsManager/src/main/resources/sql/3000words(part_0, pronouns and question words).sql" dialect="GenericSQL" />
   </component>
 </project>

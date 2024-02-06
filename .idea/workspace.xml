@@ -7,9 +7,12 @@
     <list default="true" id="245cbc0c-3571-414c-b3aa-fd468588591e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94/storage_v2/_src_/database/postgres.edMnLQ/schema/test_schema.7gWy8A.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/04cb111a-f3cd-4209-aa0a-ed4e069c9c94/storage_v2/_src_/database/postgres.edMnLQ/schema/test_schema.7gWy8A.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordsManager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/BackupWordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/WordsManager/src/main/java/com/example/WordsManager/services/BackupWordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/backup/wordsSave__2024-01-14_(13-27-40).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordsManager/src/main/resources/db/migration/V1__init.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -49,7 +52,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Petr/git/ZE/WordsManager/src/main/resources",
+    "last_opened_file_path": "C:/Users/Petr/git/ZE/WordsManager/src/main/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +72,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Petr\git\ZE\WordsManager\src\main\resources\db\migration" />
       <recent name="C:\Users\Petr\git\ZE\WordsManager\src\main\resources" />
     </key>
   </component>
@@ -91,7 +95,14 @@
       <option name="presentableId" value="Default" />
       <updated>1705216976678</updated>
       <workItem from="1705216989307" duration="745000" />
-      <workItem from="1705217892577" duration="13028000" />
+      <workItem from="1705217892577" duration="13120000" />
+      <workItem from="1705314395375" duration="13000" />
+      <workItem from="1705314435635" duration="451000" />
+      <workItem from="1705314916630" duration="93000" />
+      <workItem from="1705315044801" duration="481000" />
+      <workItem from="1705315554694" duration="673000" />
+      <workItem from="1705325255393" duration="494000" />
+      <workItem from="1705402210068" duration="4945000" />
     </task>
     <servers />
   </component>
