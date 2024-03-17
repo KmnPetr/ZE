@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 import java.time.Duration;
 
-import static java.time.LocalDateTime.now;
+import static java.time.LocalTime.now;
 import static java.util.UUID.randomUUID;
 
 @Component/*("ReactiveWebSocketHandler")*/
@@ -19,15 +19,6 @@ public class ReactiveWebSocketHandler implements WebSocketHandler {
 
 
     private static final ObjectMapper json = new ObjectMapper();
-
-    @Override
-    public Mono<Void> handle(WebSocketSession webSocketSession) {
-        return webSocketSession.send(intervalFlux
-                        .map(webSocketSession::textMessage))
-                .and(webSocketSession.receive()
-                        .map(WebSocketMessage::getPayloadAsText)
-                        .log());
-    }
 
 
     private Flux<String> eventFlux = Flux.generate(sink -> {
@@ -41,4 +32,16 @@ public class ReactiveWebSocketHandler implements WebSocketHandler {
 
     private Flux<String> intervalFlux = Flux.interval(Duration.ofMillis(1000L))
             .zipWith(eventFlux, (time, event) -> event);
+
+    @Override
+    public Mono<Void> handle(WebSocketSession webSocketSession) {
+
+
+        return webSocketSession.send(
+                webSocketSession
+                        .receive()
+                        .map(WebSocketMessage::getPayloadAsText)
+                        .log()
+                        .map(webSocketSession::textMessage));
+    }
 }
