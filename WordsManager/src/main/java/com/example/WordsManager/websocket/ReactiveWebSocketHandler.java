@@ -1,47 +1,49 @@
 package com.example.WordsManager.websocket;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.socket.WebSocketHandler;
-import org.springframework.web.reactive.socket.WebSocketMessage;
 import org.springframework.web.reactive.socket.WebSocketSession;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.time.Duration;
+import java.nio.ByteBuffer;
 
-import static java.time.LocalTime.now;
-import static java.util.UUID.randomUUID;
-
-@Component/*("ReactiveWebSocketHandler")*/
+@Component
+@Slf4j
 public class ReactiveWebSocketHandler implements WebSocketHandler {
 
+    private final ReceivedDataManager receivedDataManager;
 
-    private static final ObjectMapper json = new ObjectMapper();
+    @Autowired
+    public ReactiveWebSocketHandler(ReceivedDataManager receivedDataManager) {
+        this.receivedDataManager = receivedDataManager;
+    }
 
-
-    private Flux<String> eventFlux = Flux.generate(sink -> {
-        Event event = new Event(randomUUID().toString(), now().toString());
-        try {
-            sink.next(json.writeValueAsString(event));
-        } catch (JsonProcessingException e) {
-            sink.error(e);
-        }
-    });
-
-    private Flux<String> intervalFlux = Flux.interval(Duration.ofMillis(1000L))
-            .zipWith(eventFlux, (time, event) -> event);
 
     @Override
-    public Mono<Void> handle(WebSocketSession webSocketSession) {
+    public Mono<Void> handle(WebSocketSession session) {
 
+        Mono<Void> input = session.receive()
+                .doOnNext(webSocketMessage -> {
+                    // извлекаем байты правильно
+                    DataBuffer payload = webSocketMessage.getPayload();
+                    byte[] bytes = new byte[payload.readableByteCount()];//ok
+                    payload.read(bytes);
+                    //отправляем на дальнейшую обработку
+                    receivedDataManager.processMessage(bytes);
+                })
+                .doOnError(e->{
+                    e.printStackTrace();
+                })
+                .then();
 
-        return webSocketSession.send(
-                webSocketSession
-                        .receive()
-                        .map(WebSocketMessage::getPayloadAsText)
-                        .log()
-                        .map(webSocketSession::textMessage));
+        Flux<String> source = receivedDataManager.getEmitterProcessor().asFlux();
+        Mono<Void> output = session.send(source.map(session::textMessage));
+
+        return Mono.zip(input, output).then(); //закроет сессию если потоки или один поток (так я и не понял) завершатся
     }
 }

@@ -2,17 +2,21 @@ package com.example.WordsManager.services;
 
 import com.example.WordsManager.models.VoiceFile;
 import com.example.WordsManager.repositories.VoiceFilesRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 
 @Service
+@Slf4j
 public class VoiceFileService {
     private final VoiceFilesRepository voiceFilesRepository;
     private final String pathFolder = "src/main/resources/static/voice/";
@@ -91,5 +95,27 @@ public class VoiceFileService {
 
 
             return listFileNames;
+    }
+
+    /**
+     * сохранит файл в локальной папке проекта
+     */
+    public boolean saveVoiceInLocalFolder(VoiceFile voiceFile) {
+
+
+        for (String filename : getListFiles(pathFolder)) {
+            if (filename.equals(voiceFile.getFileName())){
+                //выкенем исключение если voice с таким именем уже был добавлен ранее
+                throw new IllegalArgumentException("Файл с именем \""+filename+"\" уже существует");
+            }
+        }
+
+        File file = new File(pathFolder+voiceFile.getFileName());
+        try (FileOutputStream fos = new FileOutputStream(file)) {
+            fos.write(voiceFile.getFileData());
+            return true;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
