@@ -9,17 +9,19 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "word")
-public class Word {
+public class Word implements Serializable {
     @Id
     @Column("id")
     private int id;
     @Column("foreign_word")
-    private String foreign_word;
+    private String foreignWord;
     @Column("transcription")
     private String transcription;
     @Column("translation")

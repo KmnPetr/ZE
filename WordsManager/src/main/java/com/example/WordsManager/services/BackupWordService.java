@@ -65,7 +65,7 @@ public class BackupWordService {
         for (int i = 0; i < sortedWords.size(); i++) {
             String row =
                     "("
-                            + "'" + sortedWords.get(i).getForeign_word() + "',"
+                            + "'" + sortedWords.get(i).getForeignWord() + "',"
                             + "'" + sortedWords.get(i).getTranscription() + "',"
                             + "'" + sortedWords.get(i).getTranslation() + "',"
                             + "'" + sortedWords.get(i).getDescription() + "',"
